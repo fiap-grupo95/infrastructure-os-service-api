@@ -69,44 +69,6 @@ Este projeto visa criar uma infraestrutura para hospedar a API da Mecanica XPTO.
    terraform destroy
    ```
 
-Para fazer os testes da aplicação utilizando o dominio da API, execute o comando abaixo para obter o IP da API:
-
-```bash
-kubectl get svc -n mecanica-xpto
-```
-Basta usar o DNS público do ELB retornado pelo Kubernetes (EXTERNAL-IP).
-
-URL:
-
-```
-http://<EXTERNAL-IP>.us-east-1.elb.amazonaws.com:8080/v1/{rota}
-```
-
-### Infraestrutura da API
-```bash
-make deploy // Deploy da API
-make get-all // Checa o status da API
-make run-jobs // Executa os jobs da API
-```
-
-### Infraestrutura do New Relic
-```bash
-make deploy-newrelic // Deploy do New Relic
-make get-newrelic // Checa o status do New Relic
-```
-
-- Para desprovisionar a execução da API e do New Relic, execute os comandos abaixo:
-
-- API
-```bash
-make delete
-```
-
-- New Relic
-```bash
-make delete-newrelic
-```
-
 ## CI/CD
 
 O projeto possui um pipeline CI/CD automatizado via GitHub Actions, que executa as seguintes etapas:
