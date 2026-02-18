@@ -1,0 +1,7 @@
+APP_SERVICE_NAME=app
+APP_CONTAINER_NAME=mecanica_xpto
+DB_SERVICE_NAME=db
+DB_CONTAINER_NAME=db
+APP_BINARY_PATH=/app/mecanica-xpto-api
+
+.PHONY: 
